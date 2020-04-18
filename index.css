@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700|Merriweather:400,400i,700&display=swap');
+
+body {
+  --c-text: #fcf7f8;
+  --c-background: #2c2c2c;
+  --c-primary: #9792a9;
+  --c-accent: #e788b8;
+  background-color: var(--c-background);
+  color: var(--c-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+}
+
+main,
+header {
+  margin: 0 auto;
+  line-height: 1.5rem;
+}
+
+header {
+  min-height: 97vh;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 4rem;
+  color: var(--c-primary);
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 85%;
+  max-width: 4em;
+  padding-top: 0.25em;
+  border-bottom: 0.1em solid var(--c-accent);
+}
+
+h3 {
+  font-style: italic;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.content.landing {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.content.content.landing h2 {
+  margin-top: -1.5em;
+}
+
+.contacts ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.contacts ul li {
+  float: left;
+  padding: 0.75em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-accent);
+}
+
+a:hover {
+  color: var(--c-primary);
+}
+
+.contacts li a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-top: 0.25em;
+  border-bottom: 0.1em solid var(--c-primary);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  padding-bottom: 1em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.play {
+  height: 50rem;
+  margin-bottom: 3rem;
+}
+
+.field {
+  height: 30rem;
+  width: 90vw;
+  top: 11.5rem;
+  position: relative;
+  border: 0.5rem solid #9792a9;
+}
+
+.field::after {
+  content: '';
+  display: inline-block;
+  height: 10rem;
+  width: 90vw;
+  border: 0.5rem solid #9792a9;
+  position: relative;
+  top: 3rem;
+  left: -0.5rem;
+}
+
+.field::before {
+  content: '';
+  display: inline-block;
+  height: 10rem;
+  width: 90vw;
+  border: 0.5rem solid #9792a9;
+  position: relative;
+  top: -11.5rem;
+  left: -0.5rem;
+}
+
+.player {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  background-color: #d4257d;
+  position: relative;
+  left: 50%;
+  top: -7.5rem;
+}
+
+#play-1
+  > .player:not(#player-5):not(#player-1):not(#handler-1):not(#handler-2) {
+  animation: first-rest-players 6s linear infinite;
+}
+
+#play-1 > .disc {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  background-color: #9792a9;
+  position: relative;
+  left: 35%;
+  top: 0rem;
+}
+
+#play-1 > .disc {
+  animation: disc-move-first 6s linear infinite;
+}
+
+#play-1 > #handler-1 {
+  top: 14rem;
+  left: 30%;
+  animation: first-handler-1 6s linear infinite;
+}
+
+#play-1 > #handler-2 {
+  top: 8rem;
+  left: 50%;
+  animation: first-handler-2 6s linear infinite;
+}
+
+#play-1 > #player-1 {
+  animation: first-move-player-1 6s linear infinite;
+}
+
+#play-1 > #player-5 {
+  animation: first-move-player-5 6s linear infinite;
+}
+
+.wrapper:not(:first-child) {
+  margin-top: 5rem;
+}
+
+@keyframes disc-move-first {
+  0% {
+    left: 30%;
+    top: 0rem;
+  }
+  25% {
+    left: 50%;
+    top: -3.5rem;
+  }
+  50% {
+    left: 77.5%;
+    top: -6rem;
+  }
+  90% {
+    left: 50%;
+    top: -32rem;
+  }
+  100% {
+    left: 50%;
+    top: -32rem;
+  }
+}
+
+@keyframes first-move-player-1 {
+  0% {
+    left: 50%;
+    top: -7.5rem;
+  }
+  20% {
+    left: 30%;
+    top: -6rem;
+  }
+
+  50% {
+    left: 35%;
+    top: -17rem;
+  }
+  90% {
+    left: 47%;
+    top: -29rem;
+  }
+  100% {
+    left: 47%;
+    top: -29rem;
+  }
+}
+
+@keyframes first-move-player-5 {
+  0% {
+    left: 50%;
+    top: -7.5rem;
+  }
+  20% {
+    left: 65%;
+    top: -9rem;
+  }
+  50% {
+    left: 75%;
+    top: 4rem;
+  }
+  100% {
+    left: 75%;
+    top: 4rem;
+  }
+}
+
+@keyframes first-handler-2 {
+  0% {
+    top: 8rem;
+    left: 50%;
+  }
+  50% {
+    top: 8rem;
+    left: 50%;
+  }
+  90% {
+    top: 0rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes first-handler-1 {
+  50% {
+    top: 14rem;
+    left: 30%;
+  }
+  90% {
+    top: 7rem;
+    left: 45%;
+  }
+  100% {
+    top: 7rem;
+    left: 45%;
+  }
+}
+
+@keyframes first-rest-players {
+  50% {
+    left: 50%;
+    top: -7.5rem;
+  }
+  90% {
+    top: -10rem;
+  }
+  100% {
+    top: -10rem;
+  }
+}
+
+#play-2 > .disc {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  background-color: #9792a9;
+  position: relative;
+  left: 52.5%;
+  top: -4.5rem;
+  animation: second-disc 6s linear infinite;
+}
+
+#play-2 > #handler-1 {
+  top: 15rem;
+  left: 65%;
+}
+
+#play-2 > #handler-2 {
+  top: 8rem;
+  left: 50%;
+}
+
+#play-2 > #player-5 {
+  animation: second-player-5 6s linear infinite;
+}
+
+#play-2 > #player-4 {
+  animation: second-player-4 6s linear infinite;
+}
+
+#play-2 > #player-3 {
+  animation: second-player-3 6s linear infinite;
+}
+
+@keyframes second-player-5 {
+  0% {
+    left: 50%;
+    top: -7.5rem;
+  }
+
+  25% {
+    top: -10rem;
+    left: 52%;
+  }
+
+  75% {
+    left: 70%;
+    top: -4rem;
+  }
+
+  100% {
+    left: 70%;
+    top: -4rem;
+  }
+}
+
+@keyframes second-player-4 {
+  0% {
+    left: 50%;
+    top: -7.5rem;
+  }
+
+  25% {
+    top: -10rem;
+    left: 30%;
+  }
+
+  75% {
+    left: 20%;
+    top: -5rem;
+  }
+
+  100% {
+    top: -5rem;
+    left: 20%;
+  }
+}
+
+@keyframes second-player-3 {
+  30% {
+    left: 50%;
+    top: -7.5rem;
+  }
+
+  90% {
+    top: -25rem;
+    left: 50%;
+  }
+
+  100% {
+    top: -25rem;
+    left: 50%;
+  }
+}
+
+@keyframes second-disc {
+  30% {
+    left: 52.5%;
+    top: -4.5rem;
+  }
+
+  45% {
+    left: 57.5%;
+  }
+
+  57.5% {
+    left: 60%;
+  }
+
+  62.5% {
+    left: 60%;
+  }
+
+  75% {
+    left: 57.5%;
+  }
+
+  90% {
+    top: -31rem;
+    left: 52.5%;
+  }
+
+  100% {
+    top: -31rem;
+  }
+}
+
+#play-3 > .disc {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  background-color: #9792a9;
+  position: relative;
+  left: 86%;
+  top: -20rem;
+  animation: third-disc 6s linear infinite;
+}
+
+#play-3 > #handler-1 {
+  top: -5rem;
+  left: 85%;
+}
+
+#play-3 > #handler-2 {
+  top: -2.5rem;
+  left: 50%;
+  animation: third-handler-2 6s linear infinite;
+}
+
+#play-3 > #handler-3 {
+  top: -10rem;
+  left: 20%;
+}
+
+#play-3 > #player-1 {
+  top: -27rem;
+  animation: third-player-1 6s linear infinite;
+}
+
+#play-3
+  > .player:not(#handler-1):not(#handler-2):not(#handler-3):not(#player-1) {
+  top: -27rem;
+  animation: third-other-players 6s linear infinite;
+}
+
+@keyframes third-handler-2 {
+  0% {
+    top: -2.5rem;
+    left: 50%;
+  }
+
+  40% {
+    top: -17rem;
+    left: 75%;
+  }
+
+  70% {
+    left: 50%;
+    top: -23rem;
+  }
+
+  100% {
+    left: 50%;
+    top: -23rem;
+  }
+}
+
+@keyframes third-player-1 {
+  37% {
+    top: -27rem;
+  }
+
+  60% {
+    top: -16rem;
+    left: 50%;
+  }
+
+  90% {
+    left: 80%;
+    top: -28rem;
+  }
+  100% {
+    left: 80%;
+    top: -28rem;
+  }
+}
+
+@keyframes third-other-players {
+  40% {
+    top: -27rem;
+  }
+
+  70% {
+    top: -25rem;
+  }
+
+  100% {
+    top: -25rem;
+  }
+}
+
+@keyframes third-disc {
+  70% {
+    left: 86%;
+    top: -20rem;
+  }
+
+  90% {
+    left: 86%;
+    top: -30rem;
+  }
+
+  100% {
+    left: 86%;
+    top: -30rem;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-player {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+  border-radius: 100%;
+  background-color: #d4257d;
+}
+
+.info-disc {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-color: #9792a9;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 767px) {
+  .field,
+  .field::after,
+  .field::before {
+    width: 30rem;
+  }
+  .play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main,
+  header {
+    width: 32rem;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */
+    transition-duration: 0.001ms !important;
+  }
+}
