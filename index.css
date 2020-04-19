@@ -6,8 +6,11 @@ html {
 body {
   --c-text: #fcf7f8;
   --c-background: #2c2c2c;
-  --c-primary: #9792a9;
+  --c-primary: #72a954;
   --c-accent: #e788b8;
+  --c-player: #d4257d;
+  --c-disc: #9792a9;
+  --c-field: #9792a9;
   background-color: var(--c-background);
   color: var(--c-text);
   display: flex;
@@ -83,7 +86,7 @@ a:hover {
   width: 100%;
   margin: auto;
   padding-top: 0.25em;
-  border-bottom: 0.1em solid var(--c-primary);
+  border-bottom: 0.1em solid var(--c-disc);
 }
 
 footer {
@@ -106,7 +109,7 @@ footer {
   width: 90vw;
   top: 11.5rem;
   position: relative;
-  border: 0.5rem solid #9792a9;
+  border: 0.5rem solid var(--c-field);
 }
 
 .field::after {
@@ -114,7 +117,7 @@ footer {
   display: inline-block;
   height: 10rem;
   width: 90vw;
-  border: 0.5rem solid #9792a9;
+  border: 0.5rem solid var(--c-field);
   position: relative;
   top: 3rem;
   left: -0.5rem;
@@ -125,7 +128,7 @@ footer {
   display: inline-block;
   height: 10rem;
   width: 90vw;
-  border: 0.5rem solid #9792a9;
+  border: 0.5rem solid var(--c-field);
   position: relative;
   top: -11.5rem;
   left: -0.5rem;
@@ -135,7 +138,7 @@ footer {
   height: 2rem;
   width: 2rem;
   border-radius: 100%;
-  background-color: #d4257d;
+  background-color: var(--c-player);
   position: relative;
   left: 50%;
   top: -7.5rem;
@@ -154,7 +157,7 @@ footer {
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 100%;
-  background-color: #9792a9;
+  background-color: var(--c-disc);
   position: relative;
   left: 35%;
   top: 0rem;
