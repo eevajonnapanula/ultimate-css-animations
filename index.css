@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:700|Merriweather:400,400i,700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   --c-text: #fcf7f8;
   --c-background: #2c2c2c;
@@ -39,36 +42,19 @@ h2::after {
   border-bottom: 0.1em solid var(--c-accent);
 }
 
-h3 {
-  font-style: italic;
+ol {
+  list-style-position: outside;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2em;
+ol li {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
 }
 
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.content.landing {
-  padding-top: 3em;
-  padding-bottom: 3em;
-  align-items: flex-end;
-  text-align: right;
-}
-
-.content.content.landing h2 {
-  margin-top: -1.5em;
+.arrow {
+  position: relative;
+  padding-left: 0.5rem;
 }
 
 .contacts ul {
@@ -108,10 +94,6 @@ footer {
   position: relative;
   bottom: 0;
   padding-bottom: 1em;
-}
-
-.bold {
-  font-weight: bold;
 }
 
 .play {
@@ -157,6 +139,10 @@ footer {
   position: relative;
   left: 50%;
   top: -7.5rem;
+}
+
+.animations-disabled {
+  display: none;
 }
 
 #play-1
@@ -211,7 +197,16 @@ footer {
     left: 50%;
     top: -3.5rem;
   }
+  30% {
+    left: 50%;
+    top: -3.5rem;
+  }
+
   50% {
+    left: 77.5%;
+    top: -6rem;
+  }
+  55% {
     left: 77.5%;
     top: -6rem;
   }
@@ -358,12 +353,12 @@ footer {
   }
 
   75% {
-    left: 70%;
+    left: 80%;
     top: -4rem;
   }
 
   100% {
-    left: 70%;
+    left: 80%;
     top: -4rem;
   }
 }
@@ -607,9 +602,20 @@ footer {
 }
 
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  html {
+    scroll-behavior: auto;
+  }
   * {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */
     transition-duration: 0.001ms !important;
+  }
+
+  .animations-disabled {
+    display: block;
+  }
+
+  .info {
+    padding-top: 2rem;
   }
 }
