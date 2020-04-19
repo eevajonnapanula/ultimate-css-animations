@@ -154,7 +154,7 @@ footer {
 
 #play-1.animated
   > .player:not(.player-5):not(.player-1):not(.handler-1):not(.handler-2) {
-  animation: first-rest-players 6s linear infinite;
+  animation: first-rest-players 6s linear 0.5s infinite;
 }
 
 #play-1 > .disc {
@@ -316,6 +316,7 @@ footer {
   90% {
     top: -10rem;
   }
+
   100% {
     top: -10rem;
   }
