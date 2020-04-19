@@ -55,6 +55,10 @@ ol li {
   padding-left: 1rem;
 }
 
+a:focus {
+  outline: 0.15rem solid var(--c-disc);
+}
+
 .arrow {
   position: relative;
   padding-left: 0.5rem;
