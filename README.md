@@ -8,6 +8,6 @@ find something. Link to original plays from
 [Playspedia](https://playspedia.com/) can be found after
 every animation.
 
-## Pure CSS
+## Technologies used
 
-This project has been made with only HTML and CSS.
+This project has been made with only HTML and CSS, and with just a little bit of JavaScript to use Intersection Observer API.
