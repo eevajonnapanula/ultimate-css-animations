@@ -104,12 +104,13 @@ footer {
 }
 
 .play {
-  height: 50rem;
-  margin-bottom: 3rem;
+  height: 45rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
 }
 
 .field {
-  height: 30rem;
+  height: 25rem;
   width: 90vw;
   top: 11.5rem;
   position: relative;
@@ -119,22 +120,22 @@ footer {
 .field::after {
   content: '';
   display: inline-block;
-  height: 10rem;
+  height: 7.5rem;
   width: 90vw;
   border: 0.5rem solid var(--c-field);
   position: relative;
-  top: 3rem;
+  top: 1rem;
   left: -0.5rem;
 }
 
 .field::before {
   content: '';
   display: inline-block;
-  height: 10rem;
+  height: 7.5rem;
   width: 90vw;
   border: 0.5rem solid var(--c-field);
   position: relative;
-  top: -11.5rem;
+  top: -9rem;
   left: -0.5rem;
 }
 
@@ -225,11 +226,11 @@ footer {
   }
   90% {
     left: 50%;
-    top: -32rem;
+    top: -30rem;
   }
   100% {
     left: 50%;
-    top: -32rem;
+    top: -30rem;
   }
 }
 
@@ -249,11 +250,11 @@ footer {
   }
   90% {
     left: 47%;
-    top: -29rem;
+    top: -27rem;
   }
   100% {
     left: 47%;
-    top: -29rem;
+    top: -27rem;
   }
 }
 
@@ -337,8 +338,8 @@ footer {
 }
 
 #play-2 > .handler-1 {
-  top: 15rem;
-  left: 65%;
+  top: 13rem;
+  left: 70%;
 }
 
 #play-2 > .handler-2 {
@@ -409,12 +410,12 @@ footer {
   }
 
   90% {
-    top: -25rem;
+    top: -23rem;
     left: 50%;
   }
 
   100% {
-    top: -25rem;
+    top: -23rem;
     left: 50%;
   }
 }
@@ -442,12 +443,12 @@ footer {
   }
 
   90% {
-    top: -31rem;
+    top: -29rem;
     left: 52.5%;
   }
 
   100% {
-    top: -31rem;
+    top: -29rem;
   }
 }
 
@@ -485,7 +486,7 @@ footer {
 }
 
 #play-3 > .player-1 {
-  top: -27rem;
+  top: -23rem;
 }
 
 #play-3.animated > .player-1 {
@@ -494,7 +495,7 @@ footer {
 
 #play-3
   > .player:not(.handler-1):not(.handler-2):not(.handler-3):not(.player-1) {
-  top: -27rem;
+  top: -23rem;
 }
 
 #play-3.animated
@@ -509,24 +510,24 @@ footer {
   }
 
   40% {
-    top: -17rem;
+    top: -13rem;
     left: 75%;
   }
 
   70% {
     left: 50%;
-    top: -23rem;
+    top: -19rem;
   }
 
   100% {
     left: 50%;
-    top: -23rem;
+    top: -19rem;
   }
 }
 
 @keyframes third-player-1 {
   37% {
-    top: -27rem;
+    top: -23rem;
   }
 
   60% {
@@ -546,15 +547,15 @@ footer {
 
 @keyframes third-other-players {
   40% {
-    top: -27rem;
+    top: -23rem;
   }
 
   70% {
-    top: -25rem;
+    top: -21rem;
   }
 
   100% {
-    top: -25rem;
+    top: -21rem;
   }
 }
 
@@ -620,10 +621,25 @@ footer {
   .field::before {
     width: 30rem;
   }
+  .field {
+    height: 30rem;
+  }
+  .field::after,
+  .field::before {
+    height: 10rem;
+  }
+  .field::after {
+    top: 3rem;
+  }
+  .field::before {
+    top: -11rem;
+  }
   .play {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 3rem;
+    height: 50rem;
   }
   main,
   header {
